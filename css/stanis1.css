@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@font-face {
+    font-family: MuseoSansCyrl;
+    src: url(../fonts/MuseoSansCyrl_100.otf);
+}
 
 .nametitle{
     align-items: center;
@@ -15,7 +18,7 @@ main,div{
     border: 0;
     border-radius: 0;
     box-sizing: border-box;
-    font-family: "Museo Sans Cyrl";
+    font-family: MuseoSansCyrl;
     margin: 0;
     scroll-behavior: smooth;
     font-size: 14px;
@@ -263,7 +266,7 @@ button{
     background-color: #f4f4f6;
     border-radius: 8px;
     color:#040013;
-    font-family: "Museo Sans Cyrl";
+    font-family: MuseoSansCyrl;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -414,7 +417,7 @@ label:hover{
     background-color: #f4f4f6;
     border-radius: 8px;
     color: #040013;
-    font-family: "Museo Sans Cyrl";
+    font-family: MuseoSansCyrl;
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
