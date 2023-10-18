@@ -22,6 +22,7 @@ main,div{
     margin: 0;
     scroll-behavior: smooth;
     font-size: 14px;
+    font-weight: 600;
 }
 
 .logotitle{
@@ -178,7 +179,7 @@ button{
 }
 
 .progressline{
-    width: 10%;
+    width: 37%;
     background-color: #d9d1e0;
     height: 2px;
     transition: all .2s;
@@ -192,235 +193,320 @@ button{
     width: 100%;
 }
 
-.img{
-    align-items: center;
-    border:  1px dashed #cdbddb;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    height: 200px;
-    padding: 14px 29px;
-    position: relative;
-    width: 366px;
-    margin-bottom: 10px;
-}
-
-.input_img{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
-}
-
-.text_img{
-    color: #040013;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-.avatar_input_img{
-    background-color: #7953c3;
-    border-radius: 8px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    padding: 8px 40px;
-    width: 144px;
-}
-
-.text_avatar_placeholder{
-    color: #aaa;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-}
-
-.input_name{
-    margin-top: 40px;
-    position: relative;
-}
-
-.first_last_name{
-    left: 0px;
-    top: -18px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    color: rgb(93,91,102);
-    position:absolute;
-    transition: all .2s ease-in-out;
-    user-select: none;
-}
-
 .aboutuser{
-    display:inline-flex;
+    width: 366px;
+}
+
+.education_step{
+    display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-.input_first_name,.input_number{
-    background-color: #f4f4f6;
-    border-radius: 8px;
-    color:#040013;
-    font-family: MuseoSansCyrl;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    min-height: 56px;
-    outline: none;
-    overflow-wrap: normal;
-    padding: 16px 12px;
-    width: 366px;
+.radioinput{
+    padding-left: 4px;
+    position: relative;
 }
 
-
-.input_sex{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.sex{
-    margin-top: 8px;
+.radioinput_wrapper{
     display: flex;
     gap: 16px;
     position: relative;
-    margin-left: 5px;
 }
 
-.input_sex1{
+.radioinput_button{
+    display: flex;
+    gap: 8px;
+}
+
+.radioinput_item{
     opacity: 0;
     position: absolute;
     z-index: -1;
+    cursor: default;
+    appearance: auto;
+    background-color: initial;
 }
 
-.input_sex1+label{
+.radioinput_item+label{
     align-items: center;
     display: inline-flex;
     user-select: none;
 }
 
-
-.input_sex1:checked+label::before{
-    background-image: url(../img/radio_active.svg);
+.radioinput_item:checked+label::before{
+    background-image: url(https://homeet.hse.ru/static/media/radio_active.279f2f5c3e5e9ab2850a.svg);
+    transition: all .2s ease-in-out
 }
 
-.input_sex1+label::before{
-    background-image: url(../img/radio_default.svg);
+.radioinput_item+label::before{
     background-position: 50%;
-    background-repeat: no-repeat;
+    background-image: url(https://homeet.hse.ru/static/media/radio_default.af21fc4065188f788103.svg);
     content: "";
-    display: inline-block;
+    background-repeat: no-repeat;
     height: 16px;
-    margin-right: 8px;
     width: 16px;
-    transition: all .2s ease-in-out;
-}
-
-.radio_input_button{
-    display: flex;
-    gap: 8px;
-}
-
-.birthdate{
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-}
-
-.birthdatetext{
-    color: rgb(93,91,102);
-    font-size: 14px;
-}
-
-input[type="date"]:in-range::-webkit-datetime-edit-year-field, input[type="date"]:in-range::-webkit-datetime-edit-month-field, input[type="date"]:in-range::-webkit-datetime-edit-day-field, input[type="date"]:in-range::-webkit-datetime-edit-text { 	color: transparent; }
-input[type="date"] {
-    position: relative;
-}
-
-.datepicker-wrapper{
-    border: 0;
-    display: inline-block;
-    padding: 0;
-    position: relative;
-    width: 100%;
+    margin-right: 8px;
 }
 
 label:hover{
     cursor: pointer;
 }
 
-.input_date{
+.educationtext{
+    color: #5d5b66;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.multipy_form{
     background-color: #f4f4f6;
     border-radius: 8px;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    height: 56px;
-    line-height: 24px;
-    outline: none;
-    padding: 12px 8px 12px 12px;
-    width: 200px;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    padding: 8px;
+    position: relative;
+    user-select: none;
+    gap: 16.4px;
 }
 
-.number{
-    width: 366px;
+.multipy_form_filter{
+    align-items: center;
+    cursor: pointer;
     display: flex;
+    justify-content: center;
+    padding: 8px 14px;
+    font-weight: 600;
+}
+
+.input_multipy_form,.single_input_form{
+    display: none;
+}
+
+.multipy_form_filter:hover{
+    background-color: #7953c3;
+    color: #fff;
+    background-size: 10px 10px;
+    border-radius: 8px;
+}
+
+.multipy_form_filter_single{
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    margin-top: 9px;
+    padding: 0 0 0 4px;
+}
+
+.multipy_form_checkbox{
+    border: 1px solid #7953c3;
+    border-radius: 4px;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+}
+
+.multipy_form_checkbox:hover{
+    background-color: #6b39cb;
+}
+
+.select-input_wrapper{
+    display: inline-flex;
     flex-direction: column;
     position: relative;
-    margin-top: 15px;
 }
 
-.first_last_name{
+.wrapper-text{
+    color: rgb(93, 91, 102);
+    font-size: 14px;
+}
+
+.css-container{
+    position: relative;
+    box-sizing: border-box;
+}
+
+.react-select-step{
+    z-index: 9999;
+    border: 0;
+    clip: rect(1px,1px,1px,1px);
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    overflow: hidden;
+    padding: 0px;
+    white-space: nowrap;
+}
+
+.select-control{
+    -webkit-box-align: center;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    min-height: 38px;
+    position: relative;
+    transition: all 100ms ease 0s;
+    box-shadow: none;
+    box-sizing: border-box;
+    border: 0px;
+    outline: 0px;
+    align-items: center;
+    background-color: #f4f4f6;
+    border-radius: 8px;
+    border-width: 0;
+    display: flex;
+    height: 56px;
+    margin-top: 4px;
+    padding: 16px;
+    width: 366px;
+    cursor: pointer;
+}
+
+.selectinput-container{
+    -webkit-box-align: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    flex: 1 1 0%;
+    display: grid;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.selectinput-placeholder{
+    grid-area: 1/1/2/3;
+    color: rgb(161,166,177);
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.react-select{
+    background: 0px center;
+    border: 0px;
+    caret-color: transparent;
+    font-size: inherit;
+    grid-area: 1/1/2/3;
+    outline: 0px;
+    padding: 0px;
+    width: 1px;
+    color: transparent;
+    left: -100px;
+    opacity: 0;
+    position: relative;
+    transform: scale(0.01);
+}
+
+.selectinput-indicators{
+    -webkit-box-align: center;
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.indicator-separetor{
+    align-self: stretch;
+    width: 1px;
+    background-color: rgb(161,166,177);
+    margin-bottom: 8px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    display: none;
+}
+
+svg{
+    height: 20;
+    width: 20;
+}
+
+svg:not(:root){
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+.selectinput-indicator{
+    color: #7953c3;
+    display: flex;
+    transition: all 0.2s ease 0s;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.selectinput_items-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+.selectinput{
+    color: inherit;
+    background: 0px center;
+    opacity: 1;
+    width: 100%;
+    grid-area: 1 / 2 / auto / auto;
+    font: inherit;
+    min-width: 2px;
+    border: 0px;
+    margin: 0px;
+    outline: 0px;
+    padding: 0px;
+}
+
+.selectinput::after{
+    content: attr(data-value) " ";
+    visibility: hidden;
+    white-space: pre;
+    grid-area: 1 / 2 / auto / auto;
+    font: inherit;
+    min-width: 2px;
+    border: 0px;
+    margin: 0px;
+    outline: 0px;
+    padding: 0px;
+}
+
+.selectinput-indicators svg{
+    margin-top: -10px;
+}
+
+.style1{
+    margin-top: 10px;
+}
+
+.textinput-wrapper{
+    width: 366px;
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.textinput_label{
     left: 12px;
     top: 16px;
     font-size: 16px;
-    line-height: 24px;
     font-weight: 400;
+    line-height: 24px;
     color: rgb(161,166,177);
     position: absolute;
     transition: all .2s ease-in-out;
     user-select: none;
 }
 
-.date{
-    left: 12px;
-    top: 16px;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    color: rgb(161,166,177);
-    position: absolute;
-    transition: all .2s ease-in-out;
-    user-select: none;
-}
-
-.number_, .telegram,.aboutme{
-    left: 12px;
-    top: 16px;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    color: rgb(161,166,177);
-    position: absolute;
-    transition: all .2s ease-in-out;
-    user-select: none;
-}
-
-.input_number,.input_telegram, .input_about_me{
+.textinput_input{
     background-color: #f4f4f6;
     border-radius: 8px;
     color: #040013;
     font-family: MuseoSansCyrl;
     font-size: 16px;
-    font-weight: 400;
     font-style: normal;
+    font-weight: 400;
     line-height: 24px;
     min-height: 56px;
     outline: none;
@@ -429,45 +515,9 @@ label:hover{
     width: 366px;
 }
 
-input:focus+label{
-    top:-15px;
-    font-size: 14px;
-    color:#040013;
-}
-
-.avatar_input_img:hover{
-    background-color: #fff;
-    color:#6b39cb;
-    border: 1px solid #6b39cb;
-}
-
-.telegramform{
-    margin-top: 15px;
-    position: relative;
-}
-
-textarea:focus+label{
-    top:-10px;
-    font-size: 14px;
-    color:#040013;
-}
-
-.about_user{
-    position: relative;
-    margin-top: 15px;
-}
-
-.example{
-    margin-top: -11px;
-}
-
-.example_text{
-    font-size: 13px;
-    color: #9e9e9e;
-    font-weight: 400;
-    width: 366px;
-    line-height: 14px;
-    letter-spacing: -.12px;
+.stepbars_container img{
+    width: 32px;
+    margin-top: -5px;
 }
 
 .title_profile_card{
@@ -701,7 +751,7 @@ textarea:focus+label{
     padding: 15px 65px;
     transition: all .2s;
     width: 226px;
-    margin-top: 380px;
+    margin-top: 300px;
     margin-left: 385px;
     color: #fff;
     font-weight: 400;
