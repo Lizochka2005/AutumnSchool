@@ -51,30 +51,30 @@
                             </div>
                             <div>
                                 <div class="education_step">
-                                    <div>
+                                    <div id="level">
                                         <p class="educationtext">Курс</p>
                                         <div class="multipy_form">
-                                            <label  class="multipy_form_filter">
+                                            <label  class="multipy_form_filter" id="a">
                                                 <input type="radio" name="educationLevel" value="1" class="input_multipy_form">
                                                 1
                                             </label>
-                                            <label  class="multipy_form_filter">
+                                            <label  class="multipy_form_filter" id="b">
                                                 <input type="radio" name="educationLevel" value="2" class="input_multipy_form">
                                                 2
                                             </label>
-                                            <label  class="multipy_form_filter">
+                                            <label  class="multipy_form_filter" id="c">
                                                 <input type="radio" name="educationLevel" value="3" class="input_multipy_form">
                                                 3
                                             </label>
-                                            <label  class="multipy_form_filter">
+                                            <label  class="multipy_form_filter" id="d">
                                                 <input type="radio" name="educationLevel" value="4" class="input_multipy_form">
                                                 4
                                             </label>
-                                            <label  class="multipy_form_filter">
+                                            <label  class="multipy_form_filter" id="e">
                                                 <input type="radio" name="educationLevel" value="5" class="input_multipy_form">
                                                 5
                                             </label>
-                                            <label  class="multipy_form_filter">
+                                            <label  class="multipy_form_filter" id="f">
                                                 <input type="radio" name="educationLevel" value="6" class="input_multipy_form">
                                                 6
                                             </label>
@@ -110,7 +110,12 @@
                                             </div>
                                             <input type="hidden" name="educationStage" value>
                                         </div>
-                                        <div class="selectinput_items-wrapper"></div>
+                                        <div class="selectinput_items-wrapper">
+                                            <div class="content">
+                                                <p class="bac">Бакалавриат</p>
+                                                <p class="mag">Магистратура</p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="select-input_wrapper">
                                         <p class="wrapper-text">Факультет</p>
@@ -133,7 +138,13 @@
                                             </div>
                                             <input type="hidden" name="faculty" value>
                                         </div>
-                                        <div class="selectinput_items-wrapper"></div>
+                                        <div class="selectinput_items-wrapper">
+                                            <div class="content">
+                                                <p class="vshb">Высшая школа бизнеса</p>
+                                                <p class="fp">Факультет права</p>
+                                                <p class="fen">Факультет экономических наук</p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="select-input_wrapper">
                                         <p class="wrapper-text">Образовательная программа</p>
@@ -149,7 +160,7 @@
                                                 </div>
                                                 <div class="selectinput-indicators">
                                                     <span class="indicator-separetor"></span>
-                                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <svg  width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <circle cx="8" cy="8" r="6.25" stroke="#A1A6B1" stroke-width="1.5"></circle>
                                                         <rect x="13.1016" y="12.0244" width="4.61831" height="1.52342" transform="rotate(45 13.1016 12.0244)" fill="#A1A6B1"></rect>
                                                     </svg>
@@ -157,7 +168,13 @@
                                             </div>
                                             <input type="hidden" name="eduProgram" value>
                                         </div>
-                                        <div class="selectinput_items-wrapper"></div>
+                                        <div class="selectinput_items-wrapper">
+                                            <div class="content">
+                                                <p class="bi">Бизнес-информатика</p>
+                                                <p class="p">Право</p>
+                                                <p class="e">Экономика</p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="style1">
                                         <div class="textinput-wrapper">
@@ -177,26 +194,30 @@
                         </p>
                         <div class="profile_card_information">
                             <div class="profile_card_left">
-                                <div class="profile_card_photo"></div>
+                                <div class="profile_card_photo">
+                                    <img src="#" alt id="blah" class="none">
+                                </div>
                                 <button disabled class="profile_card_button">
                                     Показать контакты
                                 </button>
                             </div>
                             <div class="profile_card_right">
-                                <p class="first_last_name_1"> Имя Фамилия </p>
+                                <p class="first_last_name_1"></p>
                                 <div class="profile_info_row">
                                     <div class="profile_row"></div>
+                                    <p class ="smalltext" id="smalltext1"></p>
                                     <div class="profile_divider"></div>
-                                    <div>
-                                        <p class="profile_card_age"></p>
-                                    </div>
+                                    <div class="profile_card_age"></div>
+                                    <p class="smalltext" id="smalltext3"></p>
                                     <div class="profile_divider"></div>
                                     <div class="profile_card_row"></div>
+                                    <p class="smalltext" id="smalltext4"></p>
                                 </div>
                                 <div class="plate">
-                                    <p class="plate_text"></p>
+                                    <p class="plate_text" id="platetext"></p>
                                 </div>
                                 <div class="profile_card_aboutuser"></div>
+                                <p class="smalltext1" id="smalltext2"></p>
                                 <div class="profile_card_preference">
                                     <div class="profile_preference_price"></div>
                                     <div class="profile">
@@ -264,5 +285,6 @@
         </div>
         <div class="end_color_line"></div>
     </footer>
+    <script src="../src/js/script2.js"></script>
 </body>
 </html>

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/stanis1.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
@@ -35,17 +34,23 @@
             </section>
             <section class="userinformation">
                 <div class="aboutuser">
-                    <form id="registrationform" novalidate>
+                    <form action='../src/index2.html'  id="registrationform">
                         <div class="img">
                             <label for="input_img" class="input_img">
                                 <p class="text_img"> Аватар профиля</p>
                                 <div class="avatar_input_img" id="avatar">Загрузить</div>
                                 <p class="text_avatar_placeholder">Загрузите фотографию весом не более 10 мб</p>
                             </label>
-                            <input type="file" id="input_img" accept=".png, .jpg, .jpeg">
+                            <input type="file" id="input_img" accept=".png, .jpg, .jpeg" onchange="readURL();">
+                            <div id="come" class="none">
+                                <img src="#" alt id="bla" class="img-photo2">
+                            </div>
+                            <div id="come2">
+                                <img src="#" alt id="removeimg">
+                            </div>
                         </div>
                         <div class="input_name">
-                            <input name="first_name" id="first_name" class="input_first_name" type="text">
+                            <input name="name" id="first_name" class="input_first_name" type="text" pattern="^[А-Яа-яЁё\s]+$" value="">
                             <label for="first_name" class="first_last_name"> Имя и Фамилия </label>
                         </div>
                         <div class="input_sex">
@@ -61,21 +66,21 @@
                             </div>
                             <div class="birthdate">
                                 <div class="datepicker-wrapper">
-                                    <input type="date" required name="date" id="date" class="input_date">
+                                    <input type="date" name="date" id="date" class="input_date" value>
                                     <label for="date" class="date"> Дата рождения</label>
                                 </div>
                             </div>
                             <div class="telegramform">
-                                <input type="telegram" name="telegram" id="telegram" class="input_telegram">
+                                <input type="telegram" name="telegram" id="telegram" class="input_telegram" pattern="[@]{1}[a-zA-Z0-9\-_]{1,15}" value>
                                 <label for="telegram" class="telegram">Телеграмм</label>
                             </div>
                             <div class="number">
-                                <input type="phone" id="number" class="input_number">
+                                <input type="phone" id="number" class="input_number" name="phone" pattern="[0-9]{11,}" value>
                                 <label for="numder" class="number_">Номер телефона</label>
                             </div>
                             <div class="information_about_user">
                                 <div class="about_user">
-                                    <textarea name="aboutme" id="aboutme" class="input_about_me" cols="10" rows="4"></textarea>
+                                    <textarea name="aboutme" id="aboutme" class="input_about_me" cols="10" rows="4" value></textarea>
                                     <label for="aboutme" class="aboutme">О себе</label>
                                 </div>
                                 <div class="example">
@@ -94,19 +99,21 @@
                         </p>
                         <div class="profile_card_information">
                             <div class="profile_card_left">
-                                <div class="profile_card_photo"></div>
+                                <div class="profile_card_photo">
+                                    <img src="#" alt id="blah" class="none">
+                                </div>
                                 <button disabled class="profile_card_button">
                                     Показать контакты
                                 </button>
                             </div>
                             <div class="profile_card_right">
-                                <p class="first_last_name_1"> Имя Фамилия </p>
+                                <p class="first_last_name_1"></p>
                                 <div class="profile_info_row">
                                     <div class="profile_row"></div>
+                                    <p class ="smalltext" id="smalltext1"></p>
                                     <div class="profile_divider"></div>
-                                    <div>
-                                        <p class="profile_card_age"></p>
-                                    </div>
+                                    <div class="profile_card_age"></div>
+                                    <p class="smalltext" id="smalltext3"></p>
                                     <div class="profile_divider"></div>
                                     <div class="profile_card_row"></div>
                                 </div>
@@ -114,6 +121,7 @@
                                     <p class="plate_text"></p>
                                 </div>
                                 <div class="profile_card_aboutuser"></div>
+                                <p class="smalltext1" id="smalltext2"></p>
                                 <div class="profile_card_preference">
                                     <div class="profile_preference_price"></div>
                                     <div class="profile">
@@ -182,5 +190,6 @@
         </div>
         <div class="end_color_line"></div>
     </footer>
+    <script src="../src/js/script1.js"></script>
 </body>
 </html>

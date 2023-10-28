@@ -864,3 +864,128 @@ button:hover{
     width: 24px;
     line-height: 24px;
 }
+
+
+.error{
+    border: 1px solid var(--ff-0000-button-red, #F00);
+    background: rgba(255, 0, 0, 0.05);
+}
+
+.error-text{
+    margin-left: 230px;
+    color: red;
+    margin-top: -1px;
+}
+
+.error-text1{
+    color: red;
+    margin-top: 50px;
+    margin-left: -180px;
+}
+
+.error-text2{
+    margin-left: 200px;
+    color: red;
+    margin-top: -1px;
+}
+
+.errorlabel{
+    top:-15px;
+    font-size: 14px;
+    color:red;
+}
+
+.labelvalid{
+    top:-15px;
+    font-size: 14px;
+    color:#040013;
+}
+
+input:invalid{
+    border:  1px solid red;
+    background: rgba(255, 0, 0, 0.05);
+}
+
+input:invalid+label{
+    color: red;
+    top:-15px;
+    font-size: 14px;
+}
+
+.errorAvatar{
+    border:  1px dashed red;
+    background: rgba(255, 0, 0, 0.05);
+}
+
+.aftererror{
+    margin-top: -50px;
+}
+
+.img-photo2{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.photo{
+    border: 1px solid #ebebeb;
+    border-radius: 16px;
+    height: 196px;
+    overflow: hidden;
+    position: relative;
+    width: 196px;
+}
+
+.avatarinput-remove{
+    align-items: center;
+    background-color: #fff;
+    border-radius: 24px;
+    cursor: pointer;
+    display: flex;
+    height: 18px;
+    justify-content: center;
+    position: absolute;
+    right: 850px;
+    top: 230px;
+    width: 18px;
+    z-index: 9;
+}
+
+.img-photo{
+    border: 1px solid #ebebeb;
+    border-radius: 16px;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+    transition: all .2s;
+    width: 140px;
+    opacity: 1;
+}
+
+.preview{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.none{
+    visibility: hidden;
+}
+
+.input_img2{
+    display: none;
+}
+
+.smalltext{
+    color: #040013;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+}
+
+.smalltext1{
+    color: #5d5b66;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+}

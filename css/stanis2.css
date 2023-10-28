@@ -439,10 +439,11 @@ svg:not(:root){
 }
 
 .selectinput_items-wrapper{
-    display: flex;
     flex-wrap: wrap;
     gap: 4px;
     margin-top: 4px;
+    position: relative;
+    display: inline-block;
 }
 
 .selectinput{
@@ -622,7 +623,15 @@ svg:not(:root){
     display: inline-block;
 }
 
-.profile_card_age, .plate_text{
+.plate_text{
+    color: #040013;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 10px;
+    margin-top: -1px;
+}
+
+.profile_card_age{
     color: #040013;
     font-weight: 400;
     font-size: 9px;
@@ -913,4 +922,151 @@ button:hover{
 .icon-telegram,.icon-vk{
     width: 24px;
     line-height: 24px;
+}
+
+.smalltext{
+    color: #040013;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+}
+
+.smalltext1{
+    color: #5d5b66;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+}
+
+.input_img2{
+    display: none;
+}
+
+.preview{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.img-photo{
+    border: 1px solid #ebebeb;
+    border-radius: 16px;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+    transition: all .2s;
+    width: 140px;
+    opacity: 1;
+}
+
+.none{
+    visibility: hidden;
+}
+
+.error{
+    border: 1px solid var(--ff-0000-button-red, #F00);
+    background: rgba(255, 0, 0, 0.05);
+}
+
+.error-text{
+    margin-left: 230px;
+    color: red;
+    margin-top: 10px;
+    font-weight: 400;
+    margin-bottom: -25px;
+}
+
+.error-text1{
+    color: red;
+    margin-top: 50px;
+    margin-left: -280px;
+    font-weight: 400;
+    margin-bottom: -1px;
+}
+
+.errorlabel{
+    top:-15px;
+    font-size: 14px;
+    color:red;
+}
+
+.aftererror{
+    margin-top: -50px;
+}
+
+.labelvalid{
+    top:-15px;
+    font-size: 14px;
+    color:#040013;
+}
+
+.smalltext{
+    color: #040013;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+}
+
+.smalltext1{
+    color: #5d5b66;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+}
+
+.errorRadio{
+    border: 1px solid var(--ff-0000-button-red, #F00);
+    background: rgba(255, 0, 0, 0.05);
+}
+
+.error-text3{
+    margin-left: 180px;
+    color: red;
+    margin-top: -20px;
+    font-weight: 400;
+}
+
+.error-text4{
+    color: red;
+}
+
+.labelvalidRadio{
+    background-color: #7953c3;
+    color: #fff;
+    background-size: 10px 10px;
+    border-radius: 8px;
+}
+
+.singlelabelvalidRadio{
+    background-color: #6b39cb;
+}
+
+.content{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 6px;
+}
+
+.content p{
+    color: black;
+    padding: 10px 135px;
+    text-decoration: none;
+    display: block;
+}
+
+.content p:hover{
+    background-color: #f4f4f6;
+    color:#7953c3;
+    cursor: pointer;
+}
+
+.contentafter{
+    display: block;
+}
+
+.textcontent{
+    color: #040013;
 }
