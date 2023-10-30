@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/stanis2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header class="header">
+            <div class="nametitle">
+                <img class="logotitle" src="https://homeet.hse.ru/static/media/logo_main.b8cda893341cae4261fc65095645f799.svg" alt="logo">
+                <button class="buttonexit">Выйти из аккаунта </button>
+            </div>
+        </header>
+        <div class="registrationpage">
+            <section class="titlesection">
+                <div class="headertext">
+                    <button class="buttonmain">
+                        <p>На главную</p>
+                    </button>
+                    <div class="headertext2">
+                        <h3 class="h3">Создание профиля</h3>
+                        <div class="aboutu">
+                            <p class="class2">/</p>
+                            <p class="class2">Образование</p>
+                        </div>
+                    </div>
+                    <div class="progressbar">
+                        <div class="progressline"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="userinformation">
+                <div class="aboutuser">
+                    <form id="registrationform" novalidate>
+                       <div class="education_step">
+                            <div class="radioinput">
+                                <div class="radioinput_wrapper">
+                                    <div class="radioinput_button">
+                                        <input type="radio" name="accountType" value="STUDENT" class="radioinput_item" id="STUDENT">
+                                        <label for="STUDENT"> Студент / выпускник</label>
+                                    </div>
+                                    <div class="radioinput_button">
+                                        <input type="radio" name="accountType" id="EMPLOYEE" value="EMPLOYEE" class="radioinput_item">
+                                        <label for="EMPLOYEE">Сотрудник</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="education_step">
+                                    <div id="level">
+                                        <p class="educationtext">Курс</p>
+                                        <div class="multipy_form">
+                                            <label  class="multipy_form_filter" id="a">
+                                                <input type="radio" name="educationLevel" value="1" class="input_multipy_form">
+                                                1
+                                            </label>
+                                            <label  class="multipy_form_filter" id="b">
+                                                <input type="radio" name="educationLevel" value="2" class="input_multipy_form">
+                                                2
+                                            </label>
+                                            <label  class="multipy_form_filter" id="c">
+                                                <input type="radio" name="educationLevel" value="3" class="input_multipy_form">
+                                                3
+                                            </label>
+                                            <label  class="multipy_form_filter" id="d">
+                                                <input type="radio" name="educationLevel" value="4" class="input_multipy_form">
+                                                4
+                                            </label>
+                                            <label  class="multipy_form_filter" id="e">
+                                                <input type="radio" name="educationLevel" value="5" class="input_multipy_form">
+                                                5
+                                            </label>
+                                            <label  class="multipy_form_filter" id="f">
+                                                <input type="radio" name="educationLevel" value="6" class="input_multipy_form">
+                                                6
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label class="multipy_form_filter_single">
+                                                <input type="radio" name="educationLevel" value="7" class="single_input_form">
+                                                <div class="multipy_form_checkbox">
+                                                    <img src="../src/img/checkbox.svg" alt="mark_icon">
+                                                </div>
+                                                Уже окончил Вышку
+                                            </label>
+                                        </div>
+                                    </div>  
+                                    <div class="select-input_wrapper">
+                                        <p class="wrapper-text">Ступень образованя</p>
+                                        <div class="css-container" aria-hidden="true">
+                                            <span id="react-select-step" class="react-select-step"></span>
+                                            <span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="react-select-step"></span>
+                                            <div class="select-control">
+                                                <div class="selectinput-container">
+                                                    <div class="selectinput-placeholder" id="react-select-1">Ступень образования</div>
+                                                    <input id="react-select1" tabindex="0" inputmode="none" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" role="combobox" aria-readonly="true" aria-describedby="react-select-1" class="react-select" value>
+                                                </div>
+                                                <div class="selectinput-indicators">
+                                                    <span class="indicator-separetor"></span>
+                                                    <div class="selectinput-indicator">
+                                                        <svg class="css-8" height="20" viewBox="0 0 20 20" width="20" aria-hidden="true" focusable="false">
+                                                            <path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <input type="hidden" name="educationStage" value>
+                                        </div>
+                                        <div class="selectinput_items-wrapper">
+                                            <div class="content">
+                                                <p class="bac">Бакалавриат</p>
+                                                <p class="mag">Магистратура</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="select-input_wrapper">
+                                        <p class="wrapper-text">Факультет</p>
+                                        <div class="css-container"  aria-hidden="true">
+                                            <span id="react-select-step2" class="react-select-step"></span>
+                                            <span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="react-select-step"></span>
+                                            <div class="select-control">
+                                                <div class="selectinput-container">
+                                                    <div class="selectinput-placeholder" id="react-select-2">Факультет</div>
+                                                    <input id="react-select2" tabindex="0" inputmode="none" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" role="combobox" aria-readonly="true" aria-describedby="react-select-2" class="react-select" value>
+                                                </div>
+                                                <div class="selectinput-indicators">
+                                                    <span class="indicator-separetor"></span>
+                                                    <div class="selectinput-indicator">
+                                                        <svg class="css-8" height="20" viewBox="0 0 20 20" width="20" aria-hidden="true" focusable="false">
+                                                            <path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <input type="hidden" name="faculty" value>
+                                        </div>
+                                        <div class="selectinput_items-wrapper">
+                                            <div class="content">
+                                                <p class="vshb">Высшая школа бизнеса</p>
+                                                <p class="fp">Факультет права</p>
+                                                <p class="fen">Факультет экономических наук</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="select-input_wrapper">
+                                        <p class="wrapper-text">Образовательная программа</p>
+                                        <div class="css-container">
+                                            <span id="react-select-step3" class="react-select-step"></span>
+                                            <span aria-live="polite" aria-atomic="false" aria-relevant="additions text" class="react-select-step"></span>
+                                            <div class="select-control">
+                                                <div class="selectinput-container">
+                                                    <div class="selectinput-placeholder" id="react-select-3">Образовательная программа</div>
+                                                    <div class="select-input-cintainer">
+                                                        <input id="react-select3" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" tabindex="0" type="text" inputmode="none" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" role="combobox" aria-describedby="react-select-3" class="selectinput" value>
+                                                    </div>
+                                                </div>
+                                                <div class="selectinput-indicators">
+                                                    <span class="indicator-separetor"></span>
+                                                    <svg  width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="8" cy="8" r="6.25" stroke="#A1A6B1" stroke-width="1.5"></circle>
+                                                        <rect x="13.1016" y="12.0244" width="4.61831" height="1.52342" transform="rotate(45 13.1016 12.0244)" fill="#A1A6B1"></rect>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <input type="hidden" name="eduProgram" value>
+                                        </div>
+                                        <div class="selectinput_items-wrapper">
+                                            <div class="content">
+                                                <p class="bi">Бизнес-информатика</p>
+                                                <p class="p">Право</p>
+                                                <p class="e">Экономика</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="style1">
+                                        <div class="textinput-wrapper">
+                                            <label for="job" class="textinput_label">Работа</label>
+                                            <input type="everything" id="job" name="job" class="textinput_input" autocomplete="off" value>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </form>
+                </div>
+                <div>
+                    <div class="profile_card">
+                        <p class="title_profile_card">
+                            Так будет выглядеть твоя будущая страница
+                        </p>
+                        <div class="profile_card_information">
+                            <div class="profile_card_left">
+                                <div class="profile_card_photo">
+                                    <img src="#" alt id="blah" class="none">
+                                </div>
+                                <button disabled class="profile_card_button">
+                                    Показать контакты
+                                </button>
+                            </div>
+                            <div class="profile_card_right">
+                                <p class="first_last_name_1"></p>
+                                <div class="profile_info_row">
+                                    <div class="profile_row"></div>
+                                    <p class ="smalltext" id="smalltext1"></p>
+                                    <div class="profile_divider"></div>
+                                    <div class="profile_card_age"></div>
+                                    <p class="smalltext" id="smalltext3"></p>
+                                    <div class="profile_divider"></div>
+                                    <div class="profile_card_row"></div>
+                                    <p class="smalltext" id="smalltext4"></p>
+                                </div>
+                                <div class="plate">
+                                    <p class="plate_text" id="platetext"></p>
+                                </div>
+                                <div class="profile_card_aboutuser"></div>
+                                <p class="smalltext1" id="smalltext2"></p>
+                                <div class="profile_card_preference">
+                                    <div class="profile_preference_price"></div>
+                                    <div class="profile">
+                                        <div class="profile_preference_underground"></div>
+                                    </div>
+                                <div class="profile_preference_devider"></div>
+                                <div class="laststr">
+                                    <div class="laststr1"></div>
+                                    <div class="laststr2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stepbars">
+                    <div class="stepbars_container">
+                        <div class="stepbars_plate">
+                            <p class="text_paragraph">Расскажи, где ты учишься</p>
+                            <p class="text_paragraph_first">Часто студенты ищут соседей по схожим интересам</p>
+                        </div>
+                        <img src="data:image/png;base64,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" alt="happy_icon" class="stepbars_icon">
+                    </div>
+                </div>
+                <button form="registrationform" class="registrationform_button" type="submit"> Продолжить </button>
+            </section>
+        </div>
+    </main> 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_content">
+                <div class="footer_email">
+                    <div class="link">
+                        <a href="mailto:Support@homeet.com" target="_blank" class="email" rel="noreferrer">Support@homeet.com</a>
+                        <a href="https://forms.gle/W4yJoxytwHhMq1FT9" target="_blank" class="tecnical_support" rel="noreferrer">Техническая поддержка</a>
+                    </div>
+                    <div class="footer_row">
+                        <div class="footer_links">
+                            <p class="about_service">О сервере</p>
+                            <p class="about_service">Контакты</p>
+                            <p class="about_service">Политика конфиденциальности</p>
+                        </div>
+                        <div class="icons">
+                            <div class="telegram_">
+                                <img src="../src/img/telegram_unfocus.svg" alt="icon-telegram" class="icon-telegram">
+                            </div>
+                            <div class="vk_">
+                                <img src="../src/img/vk_unfocus.svg" alt="icon-vk" class="icon-vk">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="footer_text">
+                    <p class="footer_text_1">
+                        Предложение не является публичной офертой.
+                        <br>
+                        Сервис не несёт ответственности за действия пользователей, достоверность информации и т.д.
+                    </p>
+                    <p class="footer_text_2">
+                        <p class="ftext1">Сделано в </p>
+                        <p class="ftext2">бвср</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="end_color_line"></div>
+    </footer>
+    <script src="../src/js/script2.js"></script>
+</body>
+</html>
