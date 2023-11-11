@@ -867,7 +867,6 @@ button:hover{
 
 
 .error{
-    border: 1px solid var(--ff-0000-button-red, #F00);
     background: rgba(255, 0, 0, 0.05);
 }
 

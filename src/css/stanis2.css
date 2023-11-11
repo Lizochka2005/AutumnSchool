@@ -342,9 +342,7 @@ label:hover{
 }
 
 .select-control{
-    -webkit-box-align: center;
     flex-wrap: wrap;
-    -webkit-box-pack: justify;
     justify-content: space-between;
     min-height: 38px;
     position: relative;
@@ -366,7 +364,6 @@ label:hover{
 }
 
 .selectinput-container{
-    -webkit-box-align: center;
     align-items: center;
     overflow: hidden;
     box-sizing: border-box;
@@ -964,7 +961,7 @@ button:hover{
 }
 
 .error{
-    border: 1px solid var(--ff-0000-button-red, #F00);
+    border: 1px solid #F00;
     background: rgba(255, 0, 0, 0.05);
 }
 
@@ -1015,7 +1012,7 @@ button:hover{
 }
 
 .errorRadio{
-    border: 1px solid var(--ff-0000-button-red, #F00);
+    border: 1px solid #F00;
     background: rgba(255, 0, 0, 0.05);
 }
 

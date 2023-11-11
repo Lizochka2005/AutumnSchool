@@ -46,6 +46,9 @@ document.querySelector('#a').onclick=function(){
     if(document.querySelector('#f').classList.contains('labelvalidRadio')){
         document.querySelector('#f').classList.remove('labelvalidRadio');
     }
+    if(document.querySelector('.multipy_form_checkbox').classList.contains('singlelabelvalidRadio')){
+        document.querySelector('.multipy_form_checkbox').classList.remove('singlelabelvalidRadio');
+    }
 }
 document.querySelector('#b').onclick=function(){
     this.classList.add('labelvalidRadio');
@@ -65,6 +68,9 @@ document.querySelector('#b').onclick=function(){
     }
     if(document.querySelector('#f').classList.contains('labelvalidRadio')){
         document.querySelector('#f').classList.remove('labelvalidRadio');
+    }
+    if(document.querySelector('.multipy_form_checkbox').classList.contains('singlelabelvalidRadio')){
+        document.querySelector('.multipy_form_checkbox').classList.remove('singlelabelvalidRadio');
     }
 }
 document.querySelector('#c').onclick=function(){
@@ -86,6 +92,9 @@ document.querySelector('#c').onclick=function(){
     if(document.querySelector('#f').classList.contains('labelvalidRadio')){
         document.querySelector('#f').classList.remove('labelvalidRadio');
     }
+    if(document.querySelector('.multipy_form_checkbox').classList.contains('singlelabelvalidRadio')){
+        document.querySelector('.multipy_form_checkbox').classList.remove('singlelabelvalidRadio');
+    }
 }
 document.querySelector('#d').onclick=function(){
     this.classList.add('labelvalidRadio');
@@ -105,6 +114,9 @@ document.querySelector('#d').onclick=function(){
     }
     if(document.querySelector('#f').classList.contains('labelvalidRadio')){
         document.querySelector('#f').classList.remove('labelvalidRadio');
+    }
+    if(document.querySelector('.multipy_form_checkbox').classList.contains('singlelabelvalidRadio')){
+        document.querySelector('.multipy_form_checkbox').classList.remove('singlelabelvalidRadio');
     }
 }
 document.querySelector('#e').onclick=function(){
@@ -126,6 +138,9 @@ document.querySelector('#e').onclick=function(){
     if(document.querySelector('#f').classList.contains('labelvalidRadio')){
         document.querySelector('#f').classList.remove('labelvalidRadio');
     }
+    if(document.querySelector('.multipy_form_checkbox').classList.contains('singlelabelvalidRadio')){
+        document.querySelector('.multipy_form_checkbox').classList.remove('singlelabelvalidRadio');
+    }
 }
 document.querySelector('#f').onclick=function(){
     this.classList.add('labelvalidRadio');
@@ -145,6 +160,9 @@ document.querySelector('#f').onclick=function(){
     }
     if(document.querySelector('#a').classList.contains('labelvalidRadio')){
         document.querySelector('#a').classList.remove('labelvalidRadio');
+    }
+    if(document.querySelector('.multipy_form_checkbox').classList.contains('singlelabelvalidRadio')){
+        document.querySelector('.multipy_form_checkbox').classList.remove('singlelabelvalidRadio');
     }
 }
 
