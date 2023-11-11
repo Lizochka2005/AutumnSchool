@@ -6,9 +6,7 @@ def registration(request):
     if request.method == 'POST':
         form = UsersForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            Profile.objects.create(user=user)
-            # username= form.cleaned_data.get('name')
+            form.save()
             return redirect('/')
     else:
         form = UsersForm()

@@ -35,7 +35,7 @@
             </section>
             <section class="userinformation">
                 <div class="aboutuser">
-                    <form action='../src/index2.html'  id="registrationform">
+                    <form action='../src/index2.html' id="registrationform">
                         {% csrf_token %}
                         {{form}}
                         <div class="img">
@@ -44,7 +44,7 @@
                                 <div class="avatar_input_img" id="avatar">Загрузить</div>
                                 <p class="text_avatar_placeholder">Загрузите фотографию весом не более 10 мб</p>
                             </label>
-                            <input type="file" id="input_img" accept=".png, .jpg, .jpeg" onchange="readURL();">
+                            {{form.photo}}
                             <div id="come" class="none">
                                 <img src="#" alt id="bla" class="img-photo2">
                             </div>
@@ -53,7 +53,7 @@
                             </div>
                         </div>
                         <div class="input_name">
-                            <input name="name" id="first_name" class="input_first_name" type="text" pattern="^[А-Яа-яЁё\s]+$" value="">
+                            {{form.name}}
                             <label for="first_name" class="first_last_name"> Имя и Фамилия </label>
                         </div>
                         <div class="input_sex">
@@ -69,21 +69,21 @@
                             </div>
                             <div class="birthdate">
                                 <div class="datepicker-wrapper">
-                                    <input type="date" name="date" id="date" class="input_date" value>
+                                    {{form.date}}
                                     <label for="date" class="date"> Дата рождения</label>
                                 </div>
                             </div>
                             <div class="telegramform">
-                                <input type="telegram" name="telegram" id="telegram" class="input_telegram" pattern="[@]{1}[a-zA-Z0-9\-_]{1,15}" value>
+                                {{form.telegram}}
                                 <label for="telegram" class="telegram">Телеграмм</label>
                             </div>
                             <div class="number">
-                                <input type="phone" id="number" class="input_number" name="phone" pattern="[0-9]{11,}" value>
-                                <label for="numder" class="number_">Номер телефона</label>
+                                {{form.phone}}
+                                <label for="number" class="number_">Номер телефона</label>
                             </div>
                             <div class="information_about_user">
                                 <div class="about_user">
-                                    <textarea name="aboutme" id="aboutme" class="input_about_me" cols="10" rows="4" value></textarea>
+                                    {{form.aboutuser}}
                                     <label for="aboutme" class="aboutme">О себе</label>
                                 </div>
                                 <div class="example">
@@ -149,7 +149,7 @@
                         <img src="https://homeet.hse.ru/static/media/sad_icon.3d1750e3d3e24e44526275ca3b14dc1c.svg" alt="sad_icon" class="stepbars_icon">
                     </div>
                 </div>
-                <button form="registrationform" class="registrationform_button" type="submit"> Продолжить </button>
+                <button form="registrationform" id="registrationform_button" class="registrationform_button" type="submit"> Продолжить </button>
             </section>
         </div>
     </main> 
