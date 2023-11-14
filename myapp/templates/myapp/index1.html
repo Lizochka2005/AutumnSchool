@@ -1,11 +1,10 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/stanis1.css' %}">
+    <link rel="stylesheet" href="css/stanis1.css">
 </head>
 <body>
     <main>
@@ -35,15 +34,14 @@
             </section>
             <section class="userinformation">
                 <div class="aboutuser">
-                    <form action='../src/index2.html' id="registrationform">
-                        {% csrf_token %}
+                    <form action='../src/index2.html'  id="registrationform">
                         <div class="img">
                             <label for="input_img" class="input_img">
                                 <p class="text_img"> Аватар профиля</p>
                                 <div class="avatar_input_img" id="avatar">Загрузить</div>
                                 <p class="text_avatar_placeholder">Загрузите фотографию весом не более 10 мб</p>
                             </label>
-                            {{form.photo}}
+                            <input type="file" id="input_img" accept=".png, .jpg, .jpeg" onchange="readURL();">
                             <div id="come" class="none">
                                 <img src="#" alt id="bla" class="img-photo2">
                             </div>
@@ -52,7 +50,7 @@
                             </div>
                         </div>
                         <div class="input_name">
-                            {{form.name}}
+                            <input name="name" id="first_name" class="input_first_name" type="text" pattern="^[А-Яа-яЁё\s]+$" value="">
                             <label for="first_name" class="first_last_name"> Имя и Фамилия </label>
                         </div>
                         <div class="input_sex">
@@ -68,21 +66,21 @@
                             </div>
                             <div class="birthdate">
                                 <div class="datepicker-wrapper">
-                                    {{form.date}}
+                                    <input type="date" name="date" id="date" class="input_date" value>
                                     <label for="date" class="date"> Дата рождения</label>
                                 </div>
                             </div>
                             <div class="telegramform">
-                                {{form.telegram}}
+                                <input type="telegram" name="telegram" id="telegram" class="input_telegram" pattern="[@]{1}[a-zA-Z0-9\-_]{1,15}" value>
                                 <label for="telegram" class="telegram">Телеграмм</label>
                             </div>
                             <div class="number">
-                                {{form.phone}}
-                                <label for="number" class="number_">Номер телефона</label>
+                                <input type="phone" id="number" class="input_number" name="phone" pattern="[0-9]{11,}" value>
+                                <label for="numder" class="number_">Номер телефона</label>
                             </div>
                             <div class="information_about_user">
                                 <div class="about_user">
-                                    {{form.aboutuser}}
+                                    <textarea name="aboutme" id="aboutme" class="input_about_me" cols="10" rows="4" value></textarea>
                                     <label for="aboutme" class="aboutme">О себе</label>
                                 </div>
                                 <div class="example">
@@ -148,7 +146,7 @@
                         <img src="https://homeet.hse.ru/static/media/sad_icon.3d1750e3d3e24e44526275ca3b14dc1c.svg" alt="sad_icon" class="stepbars_icon">
                     </div>
                 </div>
-                <button form="registrationform" id="registrationform_button" class="registrationform_button" type="submit"> Продолжить </button>
+                <button form="registrationform" class="registrationform_button" type="submit"> Продолжить </button>
             </section>
         </div>
     </main> 
