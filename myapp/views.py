@@ -1,7 +1,5 @@
-# from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect
 from rest_framework import viewsets
-from rest_framework.response import Response
-from rest_framework.decorators import api_view
 # from .forms import UsersForm
 from .models import Profile
 from .serializers import ProfileSerializer
@@ -16,16 +14,9 @@ from .serializers import ProfileSerializer
 #         form = UsersForm()
 #     return render(request, 'myapp/index1.html', {'form': form})
 
-@api_view(['GET', 'POST'])
 def index(request):
-    if request.method == 'POST':
-        return Response({'message': f'Hello, {request.data["text"]}'})
-    return Response({'message': 'Hello world'})
+    return render(request, 'myapp/index1.html')
 
 class ProfileViewSet(viewsets.ModelViewSet):
+    serializer_class = ProfileSerializer
     queryset = Profile.objects.all()
-    serializer_for_queryset = ProfileSerializer(
-        instance = queryset,
-        many = True
-    )
-

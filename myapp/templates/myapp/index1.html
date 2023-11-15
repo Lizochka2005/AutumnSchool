@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/stanis1.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/stanis1.css' %}">
 </head>
 <body>
     <main>
@@ -34,7 +35,8 @@
             </section>
             <section class="userinformation">
                 <div class="aboutuser">
-                    <form action='../src/index2.html'  id="registrationform">
+                    <form  id="registrationform">
+                        {% csrf_token %}
                         <div class="img">
                             <label for="input_img" class="input_img">
                                 <p class="text_img"> Аватар профиля</p>
@@ -76,7 +78,7 @@
                             </div>
                             <div class="number">
                                 <input type="phone" id="number" class="input_number" name="phone" pattern="[0-9]{11,}" value>
-                                <label for="numder" class="number_">Номер телефона</label>
+                                <label for="number" class="number_">Номер телефона</label>
                             </div>
                             <div class="information_about_user">
                                 <div class="about_user">
@@ -146,7 +148,7 @@
                         <img src="https://homeet.hse.ru/static/media/sad_icon.3d1750e3d3e24e44526275ca3b14dc1c.svg" alt="sad_icon" class="stepbars_icon">
                     </div>
                 </div>
-                <button form="registrationform" class="registrationform_button" type="submit"> Продолжить </button>
+                <button form="registrationform" class="registrationform_button" type="submit" onclick="postData()"> Продолжить </button>
             </section>
         </div>
     </main> 
@@ -190,6 +192,34 @@
         </div>
         <div class="end_color_line"></div>
     </footer>
+
+    <script>
+        function postData() {
+            const formData = new FormData(document.getElementById("registrationform"));
+
+            fetch('/myapp/api/profiles/', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                alert('Profile saved successfully!');
+                document.getElementById("registrationform").reset();
+                fetchProfile(); // Refresh the items list after posting
+            })
+            .catch(error => {
+                if (response.status === 400) {
+                    for (const field in data.errors) {
+                        const errorField = document.getElementById(`${field}Error`);
+                        errorField.textContent = data.errors[field];
+                    }
+                }
+                console.error('Error:', error);
+            });
+        }
+    </script>
+
     <script src="../src/js/script1.js"></script>
 </body>
 </html>

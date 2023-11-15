@@ -3,7 +3,7 @@ from rest_framework.routers import DefaultRouter
 # from .views import registration
 from . import views
 
-app_name ="my_app"
+app_name ="myapp"
 router = DefaultRouter()
 router.register('profiles',views.ProfileViewSet, basename='profile-viewset')
 
